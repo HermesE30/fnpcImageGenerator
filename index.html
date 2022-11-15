@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tô com a FANPEC</title>
+
+  <meta name="title" content="Tô com a FANPEC" />
+  <meta name="description" content="Gere seu post personalizado com seu nome junto com a FANPEC" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="URLAQUI" />
+  <meta property="og:title" content="Tô com a FANPEC" />
+  <meta property="og:description" content="Gere seu post personalizado com seu nome junto com a FANPEC" />
+
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="URLAQUI" />
+  <meta property="twitter:title" content="Tô com a FANPEC" />
+  <meta property="twitter:description" content="Gere seu post personalizado com seu nome junto com a FANPEC" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+SansMontserrat:wght@700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/style.css?v=4">
+</head>
+
+<body>
+  <noscript>
+    <div>Para continuar habilite o JavaScript</div>
+  </noscript>
+
+  <div class="container">
+
+    <section id="menu" class="menu-principal">
+      <div></div>
+      <!-- <p class="label">Escolha uma opção:</p> -->
+      <button onclick="clickPost()" class="btn btnFull">
+        <img src="./fnpc-thumb.png" alt="Menu" />
+        <div>
+          <p>Post</p>
+          <span class="menuBtnDestaque">Coloque seu nome</span>
+        </div>
+      </button>
+      <button onclick="clickFoto()" class="btn btnFull" style="margin-bottom: 25px;">
+        <img src="./fnpc-thumb-mascara.png" alt="Menu" />
+        <div>
+          <p>Post</p>
+          <span class="menuBtnDestaque">Coloque sua foto</span>
+        </div>
+      </button>
+      <button onclick="clickStory()" class="btn btnFull">
+        <img src="./fnpc-thumb-story.png" alt="Menu" />
+        <div>
+          <p>Story</p>
+          <span class="menuBtnDestaque">Coloque seu nome</span>
+        </div>
+      </button>
+      <div class="containerCredits">
+        <div class="btn btnFull btnCredito">
+          <small>Feito por:</small>
+          <span class="menuBtnDestaque">Hermes Emmanuel</span>
+        </div>
+        <!-- <a class="btn btnFull btnCredito" href="https://www.instagram.com/alcidesdesigner/" target="_blank">
+          <small>Desenhado por:</small>
+          <span class="menuBtnDestaque">@alcidesdesigner</span>
+        </a> -->
+      </div>
+    </section>
+
+    <main id="main" class="hidden">
+      <div class="navbar">
+        <button onclick="clickVoltar()" class="btn btnVoltar">← Menu </button>
+      </div>
+
+      <canvas id="canvas-post" width="1080" height="1080"></canvas>
+      <canvas id="canvas-story" width="1080" height="1920"></canvas>
+
+      <div class="form-input">
+        <input name="yourname" type="text" placeholder="Coloque seu nome aqui" accept="image/*"
+          oninput="this.value = this.value.toUpperCase()" />
+        <div>
+          <button id="btnSave" class="btn btnSave" href="javascript:saveImage()">Salvar</button>
+          <button id="btnShare" class="btn btnShare" href="javascript:shareImage()">Compartilhar</button>
+        </div>
+      </div>
+
+      <footer>
+        <a>
+          <!-- <img src="img/instagram-logo.svg" /> -->
+          <span>Feito por: Hermes Emmanuel</span>
+        </a>
+        <!-- <a href="https://www.instagram.com/alcidesdesigner/" target="_blank">
+          <img src="img/instagram-logo.svg" />
+          <span>Desenhado por: @alcidesdesigner</span>
+        </a> -->
+      </footer>
+    </main>
+  </div>
+
+  <script src="./scripts/script.js?v=4"></script>
+</body>
+
+</html>
